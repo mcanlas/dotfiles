@@ -1,0 +1,20 @@
+[alias]
+  st = status
+  ci = commit
+  br = branch -vv
+  co = checkout
+  dx = diff --word-diff-regex=.
+  di = diff --word-diff=color
+  lx = log -p --word-diff-regex=.
+  lp = log -p --word-diff=color
+  stat = status
+  pr = pull --rebase
+  h  = help
+  lg = log --pretty=format:'%C(bold green)%h%Creset [%C(bold yellow)%an%Creset] %s' --graph
+  f  = fetch
+
+[branch]
+    autosetuprebase = always
+    autosetupmerge = true
+[color]
+    ui = true
