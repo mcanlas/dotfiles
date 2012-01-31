@@ -3,6 +3,7 @@
   ci = commit
   br = branch -vv
   co = checkout
+  sw = checkout
   dx = diff --word-diff-regex=.
   di = diff --word-diff=color
   lx = log -p --word-diff-regex=.
