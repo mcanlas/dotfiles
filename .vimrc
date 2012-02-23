@@ -17,3 +17,5 @@ if ! did_filetype()
 endif
 
 colo elflord
+
+syntax on
