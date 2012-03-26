@@ -4,6 +4,8 @@
   br = branch -vv
   co = checkout
   sw = checkout
+  d  = diff
+  ds = diff --staged
   dx = diff --word-diff-regex=.
   di = diff --word-diff=color
   lx = log -p --word-diff-regex=.
