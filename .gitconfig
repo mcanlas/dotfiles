@@ -15,6 +15,7 @@
   h  = help
   lg = log --pretty=format:'%C(bold green)%h%Creset [%C(bold yellow)%an%Creset] %s %C(bold black)(%ar)' --graph
   f  = fetch
+  bl = blame -w
 
 [branch]
     autosetuprebase = always
