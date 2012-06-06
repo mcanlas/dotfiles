@@ -8,8 +8,8 @@
   ds = diff --staged
   dx = diff --word-diff-regex=.
   di = diff --word-diff=color
-  lx = log -p --word-diff-regex=.
-  lp = log -p --word-diff=color
+  lx = log -p -b --word-diff-regex=.
+  lp = log -p -b --word-diff=color
   stat = status
   pr = pull --rebase
   h  = help
