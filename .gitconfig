@@ -13,7 +13,7 @@
   stat = status
   pr = pull --rebase
   h  = help
-  lg = log --pretty=format:'%C(bold green)%h%Creset [%C(bold yellow)%an%Creset] %s %C(bold black)(%ar)' --graph
+  lg = log --pretty=format:'%C(bold green)%h%Creset [%C(bold yellow)%an%Creset] %s %C(bold black)(%ar)%C(bold cyan)%d%Creset' --graph
   f  = fetch
   bl = blame -w
 
