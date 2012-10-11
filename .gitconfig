@@ -22,3 +22,6 @@
     autosetupmerge = true
 [color]
     ui = true
+
+[core]
+    editor = vim
