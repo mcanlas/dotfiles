@@ -1,22 +1,22 @@
 [alias]
-  st = status
-  ci = commit
-  br = branch -vv
-  co = checkout
-  sw = checkout
-  d  = diff --no-prefix
-  ds = diff --no-prefix --staged
-  dx = diff --no-prefix --word-diff-regex=.
-  di = diff --no-prefix --word-diff=color
-  lx = log -p -b --word-diff-regex=.
-  lp = log -p -b --word-diff=color
+  st   = status
+  ci   = commit
+  br   = branch -vv
+  co   = checkout
+  sw   = checkout
+  d    = diff --no-prefix
+  ds   = diff --no-prefix --staged
+  dx   = diff --no-prefix --word-diff-regex=.
+  di   = diff --no-prefix --word-diff=color
+  lx   = log -p -b --word-diff-regex=.
+  lp   = log -p -b --word-diff=color
   stat = status
-  pr = pull --rebase
-  h  = help
-  lg = log --pretty=format:'%C(bold green)%h%Creset [%C(bold yellow)%an%Creset] %s %C(bold black)(%ar)%C(bold cyan)%d%Creset' --graph
-  f  = fetch
-  bl = blame -w
-  rbi = rebase -i
+  pr   = pull --rebase
+  h    = help
+  lg   = log --pretty=format:'%C(bold green)%h%Creset [%C(bold yellow)%an%Creset] %s %C(bold black)(%ar)%C(bold cyan)%d%Creset' --graph
+  f    = fetch
+  bl   = blame -w
+  rbi  = rebase -i
 
 [branch]
     autosetuprebase = always
