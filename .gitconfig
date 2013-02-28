@@ -27,3 +27,6 @@
 
 [core]
     editor = vim
+
+[diff]
+    noprefix = true
