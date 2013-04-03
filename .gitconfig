@@ -10,7 +10,6 @@
   di   = diff --no-prefix --word-diff=color
   lx   = log -p -b --word-diff-regex=.
   lp   = log -p -b --word-diff=color
-  stat = status
   pr   = pull --rebase
   h    = help
   lg   = log --pretty=format:'%C(bold green)%h%Creset [%C(bold yellow)%an%Creset] %s %C(bold black)(%ar)%C(bold cyan)%d%Creset' --graph
