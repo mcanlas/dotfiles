@@ -17,6 +17,7 @@
   f    = fetch -p
   bl   = blame -w
   rbi  = rebase -i
+  rbio = rebase -i origin/master
 
 [branch]
     autosetuprebase = always
