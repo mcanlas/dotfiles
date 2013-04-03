@@ -15,7 +15,7 @@
   h    = help
   lg   = log --pretty=format:'%C(bold green)%h%Creset [%C(bold yellow)%an%Creset] %s %C(bold black)(%ar)%C(bold cyan)%d%Creset' --graph
   lr   = log --pretty=format:'%C(bold green)%h%Creset [%C(bold yellow)%an%Creset] %s %C(bold black)(%ar)%C(bold cyan)%d%Creset' --reverse origin/master..
-  f    = fetch
+  f    = fetch -p
   bl   = blame -w
   rbi  = rebase -i
 
