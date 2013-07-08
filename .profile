@@ -10,3 +10,4 @@ export PS1='\[\033[1;34m\]\u\[\033[0m\]@\[\033[36m\]\H\[\033[0m\] \[\033[1;36m\]
 export PS1='\[\033[31m\]\u\[\033[0m\]@\[\033[1;31m\]\H\[\033[0m\] \[\033[1;37m\]$PWD\[\033[0m\]: '
 
 export CLICOLOR=1
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
