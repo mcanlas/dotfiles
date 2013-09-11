@@ -18,6 +18,8 @@
   bl   = blame -w
   rbi  = rebase -i
   rbio = rebase -i origin/master
+  rba  = rebase --abort
+  rbc  = rebase --continue
 
 [branch]
     autosetuprebase = always
