@@ -4,6 +4,7 @@
   br   = branch -vv
   co   = checkout
   sw   = checkout
+  sh   = show -c
   d    = diff --no-prefix
   ds   = diff --no-prefix --staged
   dx   = diff --no-prefix --word-diff-regex=.
