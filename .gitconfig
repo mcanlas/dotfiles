@@ -23,6 +23,7 @@
   rbio = rebase -i origin/master
   rba  = rebase --abort
   rbc  = rebase --continue
+  pop  = stash pop
 
 [branch]
     autosetuprebase = always
