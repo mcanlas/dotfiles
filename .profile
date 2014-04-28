@@ -1,4 +1,5 @@
 alias g=git
+alias http="python -m SimpleHTTPServer"
 
 # red green yellow
 PS1="\[\033[1;31m\]\u\[\033[0m\]@\[\033[1;32m\]\h:\[\033[1;33m\]\w\[\033[0m\] $ "
