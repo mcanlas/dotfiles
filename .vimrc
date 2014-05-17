@@ -9,13 +9,6 @@ set t_Co=256
 
 set nowrap
 
-if ! did_filetype()
-  let path = expand("%:p")
-  if path =~ 'comps\/'
-    setfiletype mason
-  endif
-endif
-
 colo elflord
 
 syntax on
