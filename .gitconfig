@@ -36,3 +36,6 @@
 
 [diff]
     noprefix = true
+
+[push]
+  default = simple
