@@ -24,6 +24,7 @@
   rba  = rebase --abort
   rbc  = rebase --continue
   pop  = stash pop
+  mf   = merge --ff-only
 
 [branch]
     autosetuprebase = always
