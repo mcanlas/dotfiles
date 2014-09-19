@@ -25,6 +25,7 @@
   rbc  = rebase --continue
   pop  = stash pop
   mf   = merge --ff-only
+  cp   = cherry-pick
 
 [branch]
     autosetuprebase = always
