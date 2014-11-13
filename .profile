@@ -14,3 +14,7 @@ export PS1='\[\033[31m\]\u\[\033[0m\]@\[\033[1;31m\]\H\[\033[0m\] \[\033[1;37m\]
 
 export CLICOLOR=1
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+
+# bash history stuff
+export HISTCONTROL="ignoredups"
+shopt -s histappend
