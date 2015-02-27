@@ -1,0 +1,3 @@
+#!/bin/sh
+
+for branch in `git branch -r | grep -v HEAD`;do echo $(git show --pretty=format:'%ci|%an|%cr|' $branch | head -n 1)$branch; done | sort | column -t -s '|'
