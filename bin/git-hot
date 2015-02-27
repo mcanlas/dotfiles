@@ -1,0 +1,3 @@
+#!/bin/sh
+
+git log --pretty=format: --name-only | grep -e '^$' -v | sort | uniq -c | sort -rg | head -20
