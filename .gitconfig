@@ -35,6 +35,8 @@
 
 [core]
     editor = vim
+  precomposeunicode = false
+  quotepath = false
 
 [diff]
     noprefix = true
