@@ -1,7 +1,7 @@
 alias g=git
 alias hig="history|grep"
 alias http="python -m SimpleHTTPServer"
-alias sack="ack --ignore-dir=target --ignore-dir=.idea"
+alias sack="ack --color --ignore-dir=target --ignore-dir=.idea" # | less -R
 alias scalad="scala -Dscala.color"
 
 # red green yellow
