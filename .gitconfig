@@ -26,6 +26,7 @@
   pop  = stash pop
   mf   = merge --ff-only
   cp   = cherry-pick
+  top  = show-branch --topics HEAD
 
 [branch]
     autosetuprebase = always
