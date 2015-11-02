@@ -27,6 +27,8 @@
   mf   = merge --ff-only
   cp   = cherry-pick
   top  = show-branch --topics HEAD
+  fi   = commit --fixup
+  fix  = commit --fixup
 
 [branch]
     autosetuprebase = always
