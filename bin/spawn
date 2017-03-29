@@ -1,0 +1,45 @@
+#!/usr/bin/env amm
+
+import ammonite.ops._
+import scala.sys.process._
+
+@main
+def main(args: String*) = {
+  val out = tmp()
+
+  write.append(out, "tell application \"iTerm\"\n")
+  write.append(out, "  create window with default profile\n")
+
+  shiftArgument(out, args.toList, false) 
+
+  write.append(out, "end tell\n")
+
+  val path = out.toString
+  println(s"cat $path".!!)
+  (s"cat $path" #| "osascript").!
+}
+
+def shiftArgument(out: Path, args: Seq[String], splitWindow: Boolean): Unit =
+  args match {
+    case head :: tail =>
+      val path =
+        if (head.contains("/"))
+          head
+        else
+          "git/" + head
+
+      if (splitWindow) {
+        write.append(out, "  tell current session of current window\n")
+        write.append(out, "    set newSession to split horizontally with default profile\n")
+        write.append(out, "  end tell\n")
+      } else {
+        write.append(out, "    set newSession to current session of current window\n")
+      }
+
+      write.append(out, "  tell newSession \n")
+      write.append(out, s"""    write text \"cd $path\"\n""")
+      write.append(out, "  end tell\n")
+
+      shiftArgument(out, tail, true)
+    case Nil =>
+  }
