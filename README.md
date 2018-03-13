@@ -8,3 +8,8 @@ Personal dotfiles
 * Turn on embedded Terminal plug-in
 * Turn on Markdown plug-in (by JetBrains)
 * Turn on Git support plug-in
+
+## JIRA filters
+
+* Least recently updated
+* Poorly written (desription is empty)
