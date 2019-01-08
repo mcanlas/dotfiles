@@ -2,5 +2,5 @@
 
 git branch -v -v | \
   grep ': gone' | \
-  perl -n -e '/\s+(\S+)/; print $1 . "\n"' | \
+  perl -n -e '/\s+(\S+)/; CORE::say $1' | \
   xargs -I {} git branch -D {}
