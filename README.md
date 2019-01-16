@@ -13,4 +13,4 @@ Personal dotfiles
 ## JIRA filters
 
 * Least recently updated
-* Poorly written (desription is empty)
+* Poorly written (description is empty)
