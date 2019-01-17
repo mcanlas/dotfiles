@@ -29,7 +29,7 @@
   top  = show-branch --topics HEAD
   fi   = commit --fixup
   fix  = commit --fixup
-  onto = !git rebase -i $1 --onto # git will automatically append $@
+  onto = !git rebase -i $1 --autosquash --onto # git will automatically append $@
 
 [branch]
     autosetuprebase = always
