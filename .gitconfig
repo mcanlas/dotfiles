@@ -41,6 +41,7 @@
     editor = vim
   precomposeunicode = false
   quotepath = false
+  excludesfile = ~/.gitignore
 
 [diff]
     noprefix = true
