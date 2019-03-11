@@ -21,13 +21,7 @@ def main(args: String*) = {
 
 def shiftArgument(out: Path, args: Seq[String], splitWindow: Boolean): Unit =
   args match {
-    case head :: tail =>
-      val path =
-        if (head.contains("/"))
-          head
-        else
-          "git/" + head
-
+    case path :: tail =>
       if (splitWindow) {
         write.append(out, "  tell current session of current window\n")
         write.append(out, "    set newSession to split horizontally with default profile\n")
