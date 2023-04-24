@@ -48,3 +48,9 @@
 
 [push]
   default = current
+  
+[includeIf "gitdir:~/git/"]
+  path = .gitconfig.work
+
+[includeIf "gitdir:~/tmp/mcanlas/"]
+  path = .gitconfig.mcanlas
