@@ -50,7 +50,7 @@
   default = current
   
 [includeIf "gitdir:~/git/"]
-  path = .gitconfig.work
+  path = .gitconfig.mcanlas
 
 [includeIf "gitdir:~/tmp/mcanlas/"]
   path = .gitconfig.mcanlas
