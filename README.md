@@ -1,6 +1,14 @@
 # dotfiles
 Personal dotfiles
 
+## New Mac
+
+- generate github ssh key
+- install `brew`
+- install `sbt-extras`
+  - append `~/bin`
+- install `jdk` (triggered by `sbt`)
+
 ## IntelliJ changes
 
 * set startup behavior to "reopen" = false
