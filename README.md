@@ -11,6 +11,7 @@ Personal dotfiles
 
 ## IntelliJ changes
 
+* keybindings to "intellij classic"
 * set startup behavior to "reopen" = false
 * set open projects in "new window"
 * autosave files at 15s
