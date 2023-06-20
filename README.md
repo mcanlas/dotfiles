@@ -3,6 +3,8 @@ Personal dotfiles
 
 ## New Mac
 
+- change shell to bash
+  - `chsh -s /bin/bash`
 - generate github ssh key
 - install `brew`
 - install `sbt-extras`
