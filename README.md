@@ -1,7 +1,7 @@
 # dotfiles
 Personal dotfiles
 
-## New Mac
+## New Mac account
 
 - change shell to bash
   - `chsh -s /bin/bash`
