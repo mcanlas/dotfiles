@@ -3,6 +3,14 @@ Personal dotfiles
 
 ## New Mac account
 
+### User
+
+- trackpad tap
+- hide menubar
+- hide dock; enlarge; drop icons
+
+### Developer
+
 - change shell to bash
   - `chsh -s /bin/bash`
 - generate github ssh key
