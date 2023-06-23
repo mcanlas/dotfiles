@@ -8,6 +8,11 @@ Personal dotfiles
 - trackpad tap
 - hide menubar
 - hide dock; enlarge; drop icons
+- apps
+  - app store: divvy; 1, 2, 3, 4
+  - chrome canary
+  - firefox
+  - iina/vlc
 
 ### Developer
 
@@ -18,6 +23,9 @@ Personal dotfiles
 - install `sbt-extras`
   - append `~/bin`
 - install `jdk` (triggered by `sbt`)
+- apps
+  - intellij toolbox
+  - vs code
 
 ## IntelliJ changes
 
