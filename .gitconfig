@@ -49,8 +49,5 @@
 [push]
   default = current
   
-[includeIf "gitdir:~/git/"]
-  path = .gitconfig.mcanlas
-
-[includeIf "gitdir:~/tmp/mcanlas/"]
+[includeIf "gitdir:~/git/mcanlas/"]
   path = .gitconfig.mcanlas
