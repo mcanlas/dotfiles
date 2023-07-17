@@ -1,6 +1,6 @@
 alias g=git
 alias fig="find . | grep -i"
-alias hig="history|grep"
+alias hig="history 0|grep"
 alias http="python -m SimpleHTTPServer"
 
 # needs ack from brew
