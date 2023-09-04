@@ -1,4 +1,4 @@
-# GH download token goes here
+export GH_PACKAGES_TOKEN=TODO
 
 export PATH="$PATH:/Users/mark/bin"
 
