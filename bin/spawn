@@ -30,16 +30,16 @@ def shiftArgument(out: Path, args: Seq[String], splitWindow: Boolean): Unit =
   args match {
     case path :: tail =>
       if (splitWindow) {
-        w("  tell current session of current window\n")
-        w("    set newSession to split horizontally with default profile\n")
-        w("  end tell\n")
+        w("  tell current session of current window")
+        w("    set newSession to split horizontally with default profile")
+        w("  end tell")
       } else {
-        w("    set newSession to current session of current window\n")
+        w("    set newSession to current session of current window")
       }
 
-      w("  tell newSession \n")
+      w("  tell newSession ")
       w(s"""    write text \"cd $servicesRoot/$path\"\n""")
-      w("  end tell\n")
+      w("  end tell")
 
       shiftArgument(out, tail, true)
     case Nil =>
