@@ -1,38 +1,45 @@
-#!/usr/bin/env amm
+#!/usr/bin/env -S scala-cli shebang
+//> using scala 3.8.3
+//> using jvm 17
 
-import ammonite.ops._
-import scala.sys.process._
+import scala.sys.process.*
+import java.nio.file.*
 
-@main
-def main(args: String*) = {
-  val out = tmp()
+def appendLine(out: Path, s: String) =
+  Files.writeString(out, s + "\n", StandardOpenOption.APPEND)
 
-  write.append(out, "tell application \"iTerm\"\n")
-  write.append(out, "  create window with default profile\n")
+val servicesRoot = "TODO"
+val out = Files.createTempFile(null, null)
 
-  shiftArgument(out, args.toList, false) 
+def w(s: String) = appendLine(out, s)
 
-  write.append(out, "end tell\n")
+w("tell application \"iTerm\"")
+w("  create window with default profile")
 
-  val path = out.toString
-  println(s"cat $path".!!)
-  (s"cat $path" #| "osascript").!
-}
+shiftArgument(out, args.toList, false)
+
+w("end tell")
+
+val path = out.toString
+println(s"cat $path".!!)
+(s"cat $path" #| "osascript").!
 
 def shiftArgument(out: Path, args: Seq[String], splitWindow: Boolean): Unit =
+  def w(s: String) = appendLine(out, s)
+
   args match {
     case path :: tail =>
       if (splitWindow) {
-        write.append(out, "  tell current session of current window\n")
-        write.append(out, "    set newSession to split horizontally with default profile\n")
-        write.append(out, "  end tell\n")
+        w("  tell current session of current window\n")
+        w("    set newSession to split horizontally with default profile\n")
+        w("  end tell\n")
       } else {
-        write.append(out, "    set newSession to current session of current window\n")
+        w("    set newSession to current session of current window\n")
       }
 
-      write.append(out, "  tell newSession \n")
-      write.append(out, s"""    write text \"cd $path\"\n""")
-      write.append(out, "  end tell\n")
+      w("  tell newSession \n")
+      w(s"""    write text \"cd $servicesRoot/$path\"\n""")
+      w("  end tell\n")
 
       shiftArgument(out, tail, true)
     case Nil =>
