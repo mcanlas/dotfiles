@@ -1,0 +1,26 @@
+#!/usr/bin/env -S scala-cli shebang
+//> using scala 3.8.4
+
+import scala.sys.process.*
+
+val owner = "mcanlas"
+
+val repositories = args.filter(arg => arg.exists(_.isLower) && !arg.exists(_.isUpper))
+val secrets      = args.filter(arg => arg.exists(_.isUpper) && !arg.exists(_.isLower))
+val invalid      = args.filterNot(arg => repositories.contains(arg) || secrets.contains(arg))
+
+if (invalid.nonEmpty) {
+  sys.error(s"Arguments must be lowercase repository names or uppercase secret names: ${invalid.mkString(", ")}")
+}
+
+if (repositories.isEmpty || secrets.isEmpty) {
+  sys.error("Provide at least one lowercase repository name and one uppercase secret name")
+}
+
+for {
+  repository <- repositories
+  secret     <- secrets
+} {
+  val url = s"https://github.com/$owner/$repository/settings/secrets/actions/$secret"
+  Seq("open", url).!
+}
