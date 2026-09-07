@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+usage() {
+  cat <<'EOF'
+Usage: model MODEL THINKING_LEVEL [MODEL_ARGUMENT ...]
+
+Known models:
+  astra                   Codex: low, medium, high, xhigh, max
+  sol, terra, luna        Codex: low, medium, high, xhigh, max
+
+Examples:
+  model astra high
+  model terra medium --search
+EOF
+}
+
+if (( $# < 2 )); then
+  usage >&2
+  exit 2
+fi
+
+model_name=$1
+thinking_level=$2
+shift 2
+
+run_codex() {
+  local codex_model=$1
+  shift
+
+  exec "${CODEX_MODEL_BIN:-codex}" \
+    --model "$codex_model" \
+    --config "model_reasoning_effort=\"$thinking_level\"" \
+    "$@"
+}
+
+case "$model_name" in
+  astra)
+    codex_model='gpt-6-astra'
+    supported_levels='low medium high xhigh max'
+    ;;
+  sol)
+    codex_model='gpt-5.6-sol'
+    supported_levels='low medium high xhigh max'
+    ;;
+  terra)
+    codex_model='gpt-5.6-terra'
+    supported_levels='low medium high xhigh max'
+    ;;
+  luna)
+    codex_model='gpt-5.6-luna'
+    supported_levels='low medium high xhigh max'
+    ;;
+  *)
+    printf 'Unknown model: %s\n' "$model_name" >&2
+    usage >&2
+    exit 2
+    ;;
+esac
+
+if [[ " $supported_levels " != *" $thinking_level "* ]]; then
+  printf 'Unsupported thinking level for %s: %s\n' "$model_name" "$thinking_level" >&2
+  usage >&2
+  exit 2
+fi
+
+run_codex "$codex_model" "$@"
