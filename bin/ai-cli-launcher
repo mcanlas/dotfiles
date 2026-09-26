@@ -45,7 +45,7 @@ case "$model_name" in
     supported_levels='low medium high xhigh max'
     ;;
   sol)
-    codex_model='gpt-5.6-sol'
+    codex_model='gpt-6-sol'
     supported_levels='low medium high xhigh max'
     ;;
   terra)
@@ -53,7 +53,7 @@ case "$model_name" in
     supported_levels='low medium high xhigh max'
     ;;
   luna)
-    codex_model='gpt-5.6-luna'
+    codex_model='gpt-6-luna'
     supported_levels='low medium high xhigh max'
     ;;
   *)
